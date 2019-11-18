@@ -22,5 +22,9 @@ class SteamUtilsCallbackAdapter extends SteamCallbackAdapter<SteamUtilsCallback>
 	void onSteamShutdown() {
 		callback.onSteamShutdown();
 	}
+	
+	void onGamepadTextInputDismissed(boolean submitted, String text) {
+		callback.onGamepadTextInputDismissed(submitted, text);
+	}
 
 }

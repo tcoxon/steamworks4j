@@ -35,6 +35,16 @@ public class SteamUtils extends SteamInterface {
 		BottomRight
 	}
 
+	public enum GamepadTextInputMode {
+		Normal,
+		Password
+	}
+
+	public enum GamepadTextInputLineMode {
+		SingleLine,
+		MultipleLines
+	}
+
 	private SteamUtilsCallbackAdapter callbackAdapter;
 
 	public SteamUtils(SteamUtilsCallback callback) {
@@ -101,6 +111,10 @@ public class SteamUtils extends SteamInterface {
 
 	public boolean isOverlayEnabled() {
 		return isOverlayEnabled(pointer);
+	}
+
+	public boolean showGamepadTextInput(GamepadTextInputMode inputMode, GamepadTextInputLineMode lineInputMode, String description, int maxLength, String existingText) {
+		return showGamepadTextInput(pointer, inputMode.ordinal(), lineInputMode.ordinal(), description, maxLength, existingText);
 	}
 
 	// @off
@@ -192,6 +206,11 @@ public class SteamUtils extends SteamInterface {
 	private static native boolean isOverlayEnabled(long pointer); /*
 		ISteamUtils* utils = (ISteamUtils*) pointer;
 		return utils->IsOverlayEnabled();
+	*/
+
+	private static native boolean showGamepadTextInput(long pointer, int inputMode, int lineInputMode, String description, int maxLength, String existingText); /*
+		ISteamUtils* utils = (ISteamUtils*) pointer;
+		return utils->ShowGamepadTextInput(inputMode, lineInputMode, description, maxLength, existingText);
 	*/
 
 }
