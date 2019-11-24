@@ -210,7 +210,7 @@ public class SteamUtils extends SteamInterface {
 
 	private static native boolean showGamepadTextInput(long pointer, int inputMode, int lineInputMode, String description, int maxLength, String existingText); /*
 		ISteamUtils* utils = (ISteamUtils*) pointer;
-		return utils->ShowGamepadTextInput(inputMode, lineInputMode, description, maxLength, existingText);
+		return utils->ShowGamepadTextInput((EGamepadTextInputMode) inputMode, (EGamepadTextInputLineMode) lineInputMode, description, maxLength, existingText);
 	*/
 
 }
