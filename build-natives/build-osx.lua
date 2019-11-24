@@ -46,7 +46,7 @@ solution "steamworks4j"
 		}
 
 		libdirs {
-			"../sdk/redistributable_bin/osx32"
+			"../sdk/redistributable_bin/osx"
 		}
 
 		links {
@@ -71,7 +71,7 @@ solution "steamworks4j"
 		}
 
 		libdirs {
-			"../sdk/redistributable_bin/osx32"
+			"../sdk/redistributable_bin/osx"
 		}
 
 		links {
@@ -92,7 +92,7 @@ solution "steamworks4j"
 		}
 
 		libdirs {
-			"../sdk/public/steam/lib/osx32"
+			"../sdk/public/steam/lib/osx"
 		}
 
 		links {
