@@ -1,4 +1,5 @@
 #include "SteamUtilsCallback.h"
+#include <cstdlib>
 
 static SteamUtilsCallback* s_messageHookInstance = NULL;
 
